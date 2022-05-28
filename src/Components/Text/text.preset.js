@@ -1,4 +1,5 @@
 import { colors } from "../../Theme/Colors";
+import { spacing } from "../../Theme/Spacing";
 import { typography } from "../../Theme/Typography";
 
 const BASE = {
@@ -23,16 +24,18 @@ export const presets = {
   bold: BOLD,
   h1: {
     ...BOLD,
-    fontSize: 32,
+    fontSize: 24,
+    color: colors.white,
   },
 
   h2: {
     ...BOLD,
-    fontSize: 28,
+    fontSize: 20,
+    color: colors.white,
   },
   h3: {
     ...BASE_BOLD,
-    fontSize: 24,
+    fontSize: 18,
   },
   h4: {
     ...BASE_BOLD,
@@ -40,6 +43,7 @@ export const presets = {
   },
   small: {
     ...BASE,
-    fontSize: 12,
+    fontSize: 14,
+    color: colors.white,
   },
 };

@@ -21,15 +21,30 @@ export default function Home({ navigation }) {
             <Feather name="bell" size={24} color="white" />
           </View>
           <View style={styles.headerWrap}>
-            <Text>Covid-19</Text>
-            <View>
+            <Text preset="h1">Covid-19</Text>
+            <View style={styles.dropDownWrap}>
               <Image
-                style={styles.menu}
+                style={styles.flag}
                 source={require("../images/flag.png")}
               ></Image>
               <View></View>
-              <Text>USA</Text>
-              <AntDesign name="caretdown" size={24} color="black" />
+              <Text style={styles.usa}>USA</Text>
+              <AntDesign name="caretdown" size={24} color="#61688B" />
+            </View>
+          </View>
+          <Text preset="h2" style={{ marginTop: 40 }}>
+            Are you feeling sick?
+          </Text>
+          <Text preset="small" style={styles.small}>
+            If you feel sick with any of covid-19 symptoms please call or SMS us
+            immediately for help.
+          </Text>
+          <View style={styles.buttonWrap}>
+            <View style={styles.callButton}>
+              <Text>Call Now</Text>
+            </View>
+            <View style={styles.smsButton}>
+              <Text>Send SMS</Text>
             </View>
           </View>
         </View>
@@ -55,6 +70,46 @@ const styles = StyleSheet.create({
   headerWrap: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 50,
+    marginTop: 40,
+    alignItems: "center",
+  },
+  dropDownWrap: {
+    flexDirection: "row",
+    backgroundColor: colors.white,
+    paddingHorizontal: spacing[3],
+    paddingVertical: spacing[2],
+    borderRadius: 25,
+    alignItems: "center",
+  },
+  flag: {
+    height: 30,
+    width: 30,
+  },
+  usa: {
+    marginHorizontal: spacing[4],
+    fontWeight: "bold",
+    color: colors.purpleText,
+  },
+  small: {
+    fontWeight: 400,
+    lineHeight: 22,
+    marginTop: spacing[5],
+    opacity: 0.8,
+  },
+  buttonWrap: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  callButton: {
+    backgroundColor: colors.pink,
+    paddingHorizontal: spacing[10],
+    paddingVertical: spacing[5],
+    borderRadius: spacing[7],
+  },
+  smsButton: {
+    backgroundColor: colors.blue,
+    paddingHorizontal: spacing[10],
+    paddingVertical: spacing[5],
+    borderRadius: spacing[7],
   },
 });
