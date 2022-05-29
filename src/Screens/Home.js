@@ -4,6 +4,7 @@ import { colors } from "../Theme/Colors";
 import { View } from "react-native-web";
 import { Feather, AntDesign, Ionicons } from "@expo/vector-icons";
 import { spacing } from "../Theme/Spacing";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function Home({ navigation }) {
   const detailsPage = () => {
@@ -117,7 +118,12 @@ export default function Home({ navigation }) {
             </Text>
           </View>
         </View>
-        <View style={styles.test}>
+        <LinearGradient
+          colors={["#AEA1E5", "#56549E"]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          style={styles.test}
+        >
           <Image
             style={styles.testImage}
             source={require("../images/Group.png")}
@@ -133,7 +139,7 @@ export default function Home({ navigation }) {
               Follow the instructions to do your own test.
             </Text>
           </View>
-        </View>
+        </LinearGradient>
       </ScrollView>
     </SafeAreaView>
   );
